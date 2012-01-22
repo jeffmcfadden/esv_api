@@ -5,7 +5,7 @@ describe ESV::Client do
     @keys = ESV::Config::VALID_OPTIONS_KEYS
     
     ESV.configure do |config|
-      config.api_key = 'aae0629deae45288'
+      config.api_key = 'a_valid_api_key'
     end
   end
 
