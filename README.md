@@ -2,6 +2,10 @@
 
 An API Wrapper for the ESV API
 
+# Limitations
+
+Currently only supports `passage_query`
+
 # Installation
 
 ```ruby
