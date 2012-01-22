@@ -32,5 +32,68 @@ module ESV
       
       ESV::Client.get( self.endpoint + '/passageQuery', { :query => query } )
     end
+    
+    def query( q, options={} )
+      query = {
+          'key' => self.api_key,
+          'q' => q
+      }
+      
+      query = options.merge( query )
+      
+      ESV::Client.get( self.endpoint + '/query', { :query => query } )
+    end
+    
+    def reading_plan_query( options={} )
+      query = {
+          'key' => self.api_key,
+      }
+      
+      query = options.merge( query )
+      
+      ESV::Client.get( self.endpoint + '/readingPlanQuery', { :query => query } )
+    end
+    
+    def query_info( q, options={} )
+      query = {
+          'key' => self.api_key,
+          'q'   => q
+      }
+      
+      query = options.merge( query )
+      
+      ESV::Client.get( self.endpoint + '/queryInfo', { :query => query } )
+    end
+    
+    def reading_plan_info( options={} )
+      query = {
+          'key' => self.api_key,
+      }
+      
+      query = options.merge( query )
+      
+      ESV::Client.get( self.endpoint + '/readingPlanQuery', { :query => query } )
+    end
+    
+    def verse( options={} )
+      query = {
+          'key' => self.api_key,
+      }
+      
+      query = options.merge( query )
+      
+      ESV::Client.get( self.endpoint + '/verse', { :query => query } )
+    end
+    
+    def daily_verse( options={} )
+      query = {
+          'key' => self.api_key,
+      }
+      
+      query = options.merge( query )
+      
+      ESV::Client.get( self.endpoint + '/verse', { :query => query } )
+    end
+    
   end
 end

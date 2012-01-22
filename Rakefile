@@ -1,13 +1,10 @@
-require 'rake'
-require 'rake/testtask'
-require 'rake/rdoctask'
+#!/usr/bin/env rake
 
-desc 'Default: run unit tests.'
-task :default => :test
+require 'bundler'
+Bundler::GemHelper.install_tasks
 
-desc 'Test the esv_api gem.'
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = true
-end
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec)
+
+task :test => :spec
+task :default => :spec
