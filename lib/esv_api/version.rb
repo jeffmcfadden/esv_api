@@ -3,7 +3,7 @@ module ESV
 
     # @return [Integer]
     def self.major
-      0
+      1
     end
 
     # @return [Integer]
@@ -13,7 +13,7 @@ module ESV
 
     # @return [Integer]
     def self.patch
-      1
+      0
     end
 
     # @return [String, NilClass]

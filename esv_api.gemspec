@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   
   s.platform    = Gem::Platform::RUBY
   s.name        = 'esv_api'
-  s.version     = '0.0.1'
+  s.version     = '1.0.0'
   s.authors     = ["Jeff McFadden"]
   s.email       = ["jeff@forgeapps.com"]
   s.homepage    = "http://github.com/jeffmcfadden/esv_api"
