@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  gem.add_dependency 'httparty'
+  s.add_dependency 'httparty'
   
   s.platform    = Gem::Platform::RUBY
   s.name        = 'esv_api'

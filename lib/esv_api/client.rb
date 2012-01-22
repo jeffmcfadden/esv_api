@@ -1,5 +1,7 @@
 require 'esv_api/config'
 
+require 'httparty'
+
 module ESV
   # Wrapper for the ESV API
   #
@@ -22,13 +24,13 @@ module ESV
     
     def passage_query(passage, options={})
       query = {
-          'key' => ESV::Config.api_key,
+          'key' => self.api_key,
           'passage' => passage
       }
       
-      query = (options += query ).uniq
+      query = options.merge( query )
       
-      ESV::Client.get( ESV::Config.endpoint + '/passageQuery', { :query => queryOptions } )
+      ESV::Client.get( self.endpoint + '/passageQuery', { :query => query } )
     end
   end
 end

@@ -42,7 +42,7 @@ module ESV
 
     # Reset all configuration options to defaults
     def reset
-      self.api_key            = DEFAULT_ADAPTER
+      self.api_key            = DEFAULT_API_KEY
       self.endpoint           = DEFAULT_ENDPOINT
       self.user_agent         = DEFAULT_USER_AGENT
       self
