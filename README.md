@@ -67,6 +67,10 @@ For example:
 
 HTML is the default output and will appear unless output-format is specified. To make full use of the text, you will probably want to link a CSS stylesheet to your page, either one you've created or [GNP's CSS](http://www.gnpcb.org/esv/assets/style/text.css). This stylesheet contains close to the minimum markup needed to render the text accurately.
 
+## Caching
+
+If you have the `dalli` gem installed, `esv_api` will cache the data returned from passage_query calls, taking options into account when setting the key.
+
 # Credits
 
 With love to the Twitter Gem, from which I borrowed heavily.
