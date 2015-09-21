@@ -17,7 +17,8 @@ module ESV
     VALID_OPTIONS_KEYS = [
       :api_key,
       :endpoint,
-      :user_agent
+      :user_agent,
+      :should_cache
     ]
 
     attr_accessor *VALID_OPTIONS_KEYS
@@ -45,6 +46,7 @@ module ESV
       self.api_key            = DEFAULT_API_KEY
       self.endpoint           = DEFAULT_ENDPOINT
       self.user_agent         = DEFAULT_USER_AGENT
+      self.should_cache       = true
       self
     end
 
